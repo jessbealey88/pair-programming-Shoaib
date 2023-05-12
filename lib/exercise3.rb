@@ -1,7 +1,7 @@
 def get_most_common_letter(text)
     counter = Hash.new(0)
     #p counter
-    text.gsub(/\s+/, "").chars.each do |char|
+    text.gsub(/\W+/, "").chars.each do |char|
    # p "#{char}"
       counter[char] += 1
    #p counter
@@ -11,4 +11,4 @@ def get_most_common_letter(text)
     #p counter
   end
 
-print get_most_common_letter("Hel   lo!!! ")
+print get_most_common_letter("the roof, the roof, the roof is on fire!")
