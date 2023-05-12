@@ -10,8 +10,10 @@ end
 
 def decode(ciphertext, key)
   cipher = key.chars.uniq + (('a'...'z').to_a - key.chars)
+  # puts "This is what the cipher does #{cipher}"
   plaintext_chars = ciphertext.chars.map do |char|
     cipher[65 - char.ord]
+    # puts "This is what char does here #{char}"
   end
   return plaintext_chars.join
 end
@@ -19,8 +21,11 @@ end
 # Intended output:
 #
 encode("theswiftfoxjumpedoverthelazydog", "secretkey")
-# "EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL"
+# EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL"
 #
-decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
+# decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
 # => "theswiftfoxjumpedoverthelazydog"
 
+# print encode("theswiftfoxjumpedoverthelazydog", "secretkey")
+
+decode("EMBAXNKEKSYOVQTBJSWBDEMBPHAGJSL", "secretkey")
