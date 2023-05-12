@@ -20,10 +20,10 @@ end
 
 # Intended output:
 #
-print encode("theswiftfoxjumpedoverthelazydog", "secretkey")
+puts encode("theswiftfoxjumpedoverthelazydog", "secretkey")
 # EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL"
 #
-print decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
+puts decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
 # => "theswiftfoxjumpedoverthelazydog"
 
 # print encode("theswiftfoxjumpedoverthelazydog", "secretkey")
