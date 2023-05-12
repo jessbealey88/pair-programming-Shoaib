@@ -1,11 +1,11 @@
 def encode(plaintext, key)
   cipher = key.chars.uniq + (('a'...'z').to_a - key.chars)
-  puts "This is what the cipher does #{cipher}"
   ciphertext_chars = plaintext.chars.map do |char|
-    (65 + cipher.find_index(char)).chr
+    #puts "char is #{char}"
+    (65 + cipher.find_index(char).to_i).chr
   end
   return ciphertext_chars.join
-  print "This is what the ciphertext_chars does #{ciphertext_chars}"
+  #print "This is what the ciphertext_chars does #{ciphertext_chars}"
 end
 
 def decode(ciphertext, key)
